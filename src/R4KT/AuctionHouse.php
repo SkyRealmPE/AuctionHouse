@@ -205,8 +205,8 @@ class AuctionHouse extends PluginBase {
     /**
     * Auction commands.
     */
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
-        if (strtolower($cmd->getName()) === 'ah') {
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args) : bool{
+        if (strtolower($command->getName()) === 'ah') {
             if (count($args) === 0) {
                 self::sendHelp($sender);
             } else {
